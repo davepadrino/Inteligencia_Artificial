@@ -37,11 +37,20 @@ int j=0;
 }
 
 
+int x_cont = 0;
+int y_cont = 0;
 
-void search_bigger(){
-
-
-
+void search_bigger(vector <int> x, vector <int> y){
+	for (int i = 0; i < x.size(); i++){
+		if (x[i] > x_cont){
+			x_cont = x[i];
+		}
+	}
+	for (int j = 0; j < y.size(); j++){
+		if (y[j] > y_cont){
+			y_cont = y[j];
+		}
+	}
 }
 
 
@@ -62,14 +71,15 @@ int main (){
 			aux=atoi(line.c_str());
 		}else{
 			a_int(line);
-			//search_bigger();
+			search_bigger(x, y);
+			//cout << "mayor de x: " << x_cont << "\n";
+			//cout << "mayor de y: " << y_cont << "\n";
+
     	}
 		i++;
 	}
 	    myfile.close();
 	
-		cout <<x.size()<<"\n";
-cout <<x[5]<<"\n";
 	//for(int k=0;k<x.size();k++)
 		//cout << x[k] << " " << y[k] << endl;
 
