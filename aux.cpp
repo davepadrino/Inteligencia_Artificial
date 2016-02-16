@@ -1,23 +1,41 @@
-// min_element/max_element example
-#include <iostream>     // std::cout
-#include <algorithm>    // std::min_element, std::max_element
-#include <vector>
-#include <stdio.h>
-#include <fstream>
-#include <sstream>
-#include <string>
+#include <iostream>
 #include <stdlib.h>
-#include <vector>
-bool myfn(int i, int j) { return i<j; }
+#include <stdio.h>
+using namespace std;
 
-struct myclass {
-  bool operator() (int i,int j) { return i<j; }
-} myobj;
-
-
-int main () {
-	int myints[] = {3,7,2,5,6,4,9,10};
-	std::cout << "The largest element is "  << *std::max_element(myints,myints+7) << '\n';
-
-  return 0;
+int rdtsc()
+{
+    __asm__ __volatile__("rdtsc");
 }
+
+void aux(){
+
+cout << rand()<< endl;
+		cout << rand()<< endl;
+		cout << rand()<< endl;
+		cout << rand()<< endl;
+		cout << rand()<< endl;
+}
+int main()
+{
+	int i = 0;
+	//while(i++ < 10) {
+srand(rdtsc());
+        printf("%d\n", rand());
+		cout << rand()<< endl;
+		cout << rand()<< endl;
+		cout << rand()<< endl;
+		cout << rand()<< endl;
+		cout << rand()<< endl;
+
+		aux();
+
+
+	//}
+	return 0;
+}
+
+
+
+
+
